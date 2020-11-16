@@ -17,7 +17,12 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 20;
+ if (votingAge >= 18) {
+   console.log("true");
+ } else {
+   console.log("false");
+ }
 
 
 /*
@@ -31,7 +36,11 @@ Do the following:
    HINT: no function required
 */
 
+const x = 5
+const y = 10
 
+const newValue = (x > y) ? "true" : "false";
+console.log(newValue);
 
 
 
@@ -45,8 +54,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+let a = "1999";
+Number("1999");
 
 
 /*
@@ -58,9 +67,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a*b;
   }
+  multiply(4,5);
 
 
 
@@ -74,11 +84,9 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -107,11 +115,22 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
-
-
+function hungryDog(weight, age){
+  if(age >= 1 && weight <= 5){
+    return weight * .05;
+  }else if(age >= 1 && weight >= 6 && weight >= 10){
+    return weight * .04;
+  }else if(age >= 1 && weight >= 11 && weight >= 15){
+    return weight * .03;
+  }else if(age >= 1 && weight < 15){
+    return weight * .02;
+  }else if(age <= 1 && age >= .16 && age <= .33){
+    return weight * .1;
+  }else if(age <= 1 && age >= .33 && age <= .583){
+    return weight * .05;
+  }else if(age <= 1 && age >= .583){
+    return weight * .04;
+}}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -133,7 +152,37 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+    computer = Math.random();
+    if (computer < .34) {
+      computer = "rock"
+    } else if (computer <= .67) {
+      computer = "paper";
+    } else {
+      computer = "scissors"
+    }
+    if ( user === computer) {
+      return "it's a tie"
+    } else if (user === "rock") {
+      if (computer === "scissors") {
+        return "you win!"
+      } else if (computer === "paper") {
+        return "you lose!"
+      }
+    }
+    else if (user === "paper") {
+      if (computer === "rock") {
+        return "you win!"
+      } else if (computer === "scissors") {
+        return "you lose!"
+      }
+    }
+    else if (user === "scissors") {
+      if (compter === "paper") {
+        return "you win!"
+      } else if (computer === "rock") {
+        return "you lose!"
+      }
+    }
 }
   
   
@@ -149,8 +198,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km * 1.60934;
   }
 
 
@@ -163,8 +212,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm * 30.48
   }
  
 
@@ -179,9 +228,15 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(){
+	let bottles = 101;
+
+while(bottles > 0){
+	console.log(bottles);
+	bottles--;
+}
+
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -199,9 +254,23 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grading(val){
+  if(val >= 90) {
+      return "A";
   }
+  else if(val >= 80)  {
+    return "B"
+  }
+  else if(val >= 70)  {
+    return "C"
+  }
+  else if(val >= 60)  {
+    return "D"
+  }
+  else{
+    return "F"
+  }
+}
   
   
   
