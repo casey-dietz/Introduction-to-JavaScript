@@ -152,7 +152,37 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+    computer = Math.random();
+    if (computer < .34) {
+      computer = "rock"
+    } else if (computer <= .67) {
+      computer = "paper";
+    } else {
+      computer = "scissors"
+    }
+    if ( user === computer) {
+      return "it's a tie"
+    } else if (user === "rock") {
+      if (computer === "scissors") {
+        return "you win!"
+      } else if (computer === "paper") {
+        return "you lose!"
+      }
+    }
+    else if (user === "paper") {
+      if (computer === "rock") {
+        return "you win!"
+      } else if (computer === "scissors") {
+        return "you lose!"
+      }
+    }
+    else if (user === "scissors") {
+      if (compter === "paper") {
+        return "you win!"
+      } else if (computer === "rock") {
+        return "you lose!"
+      }
+    }
 }
   
   
@@ -168,8 +198,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km * 1.60934;
   }
 
 
@@ -182,8 +212,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm * 30.48
   }
  
 
@@ -198,9 +228,15 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(){
+	let bottles = 101;
+
+while(bottles > 0){
+	console.log(bottles);
+	bottles--;
+}
+
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -218,9 +254,23 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grading(val){
+  if(val >= 90) {
+      return "A";
   }
+  else if(val >= 80)  {
+    return "B"
+  }
+  else if(val >= 70)  {
+    return "C"
+  }
+  else if(val >= 60)  {
+    return "D"
+  }
+  else{
+    return "F"
+  }
+}
   
   
   
