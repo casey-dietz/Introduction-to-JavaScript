@@ -17,7 +17,12 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 20;
+ if (votingAge >= 18) {
+   console.log("true");
+ } else {
+   console.log("false");
+ }
 
 
 /*
@@ -31,7 +36,11 @@ Do the following:
    HINT: no function required
 */
 
+const x = 5
+const y = 10
 
+const newValue = (x > y) ? "true" : "false";
+console.log(newValue);
 
 
 
@@ -45,8 +54,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+let a = "1999";
+Number("1999");
 
 
 /*
@@ -58,9 +67,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a*b;
   }
+  multiply(4,5);
 
 
 
